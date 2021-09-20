@@ -7,3 +7,4 @@ then
 else
 	echo "$3 is bigger than $1 and $2"
 fi
+echo "girish"
