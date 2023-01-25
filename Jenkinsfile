@@ -1,7 +1,6 @@
 pipeline {
-    agent any
-    }
     stages {
+        agent any
         stage('Install Docker') {
             steps {
                 sh 'sudo apt-get update'
@@ -12,3 +11,4 @@ pipeline {
             }
         }
     }
+}
