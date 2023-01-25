@@ -1,13 +1,17 @@
 pipeline {
+    agent {
+        docker {
+            image 'ubuntu:20.04'
+        }
+    }
     stages {
-        agent any
         stage('Install Docker') {
             steps {
                 sh 'sudo apt-get update'
-                sh 'sudo apt-get install -y docker.io'
+ sh 'sudo apt-get install -y docker.io'
                 sh 'sudo systemctl start docker'
-                sh 'sudo systemctl enable docker'
-                sh 'docker --version'
+                 sh 'sudo systemctl enable docker'
+                                sh 'docker --version'
             }
         }
     }
