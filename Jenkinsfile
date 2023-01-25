@@ -1,5 +1,5 @@
 pipeline {
-    agent any {
+    any {
         docker {
             image 'ubuntu:20.04'
         }
